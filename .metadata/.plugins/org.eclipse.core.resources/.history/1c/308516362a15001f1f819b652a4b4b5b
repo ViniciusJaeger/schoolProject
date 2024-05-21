@@ -1,0 +1,12 @@
+package com.alpdex.enums;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="teacher_graduation")
+public class GraduationEnum {
+
+	private Long id;
+	private String name;
+}

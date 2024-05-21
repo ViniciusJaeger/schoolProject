@@ -1,0 +1,12 @@
+package com.alpdex.dao;
+
+import javax.persistence.EntityManager;
+
+public class SecretariatDao {
+
+	private EntityManager em;
+	
+	public SecretariatDao(EntityManager em) {
+		this.em = em;
+	}
+}

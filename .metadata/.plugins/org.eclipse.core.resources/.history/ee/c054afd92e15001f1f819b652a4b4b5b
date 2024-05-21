@@ -1,0 +1,35 @@
+package com.alpdex.demo;
+
+import javax.persistence.EntityManager;
+
+import com.alpdex.dao.GraduationDao;
+import com.alpdex.dao.TeacherDao;
+import com.alpdex.entity.Graduation;
+import com.alpdex.entity.Teacher;
+import com.alpdex.utils.JPAUtil;
+
+public class TeacherDemo {
+
+	public static void main(String[] args) {
+		
+		Graduation graduation = new Graduation();
+		Teacher pr = new Teacher();
+		
+		graduation.setName("Bachelor of Physics");
+		pr.setName("Marcos");
+		pr.setAge(45);
+		pr.setGraduation(graduation);
+		
+		EntityManager em = JPAUtil.getEntityManager();
+		TeacherDao teacherDao = new TeacherDao(em);
+		GraduationDao graduationDao = new GraduationDao(em);
+	
+		em.getTransaction().begin();
+		
+		graduationDao.insert(graduation);
+		teacherDao.insert(pr);
+		
+		em.getTransaction().commit();
+		em.close();	
+	}
+}

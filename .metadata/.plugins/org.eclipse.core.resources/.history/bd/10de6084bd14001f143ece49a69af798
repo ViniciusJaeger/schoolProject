@@ -1,0 +1,5 @@
+package com.alpdex.enums;
+
+public enum GraduationEnum {
+
+}

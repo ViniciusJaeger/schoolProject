@@ -1,0 +1,7 @@
+package com.alpdex.entity;
+
+@Entity
+@Table(name="secretariat")
+public class Secretariat {
+
+}

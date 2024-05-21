@@ -1,0 +1,25 @@
+package com.alpdex.entity;
+
+import javax.annotation.processing.Generated;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Table;
+
+import com.alpdex.enums.GraduationEnum;
+
+@Entity
+@Table(name="teacher")
+public class Teacher {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="teacher_id")
+	private Long id;
+	
+	private String name;
+	
+	private int age;
+	
+	private GraduationEnum graduation;
+}

@@ -1,0 +1,14 @@
+package com.alpdex.demo;
+
+import javax.persistence.EntityManager;
+
+import com.alpdex.utils.JPAUtil;
+
+public class SecreatariatDemo {
+
+	public static void main(String[] args) {
+		EntityManager em = JPAUtil.getEntityManager();
+	}
+	
+	
+}

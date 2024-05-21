@@ -1,0 +1,8 @@
+package alpdex.entity;
+
+@Entity
+public class Student {
+
+	
+	
+}

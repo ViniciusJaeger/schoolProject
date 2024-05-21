@@ -1,0 +1,7 @@
+package com.alpdex.entity;
+
+public class Student {
+
+	private Long id;
+	
+}

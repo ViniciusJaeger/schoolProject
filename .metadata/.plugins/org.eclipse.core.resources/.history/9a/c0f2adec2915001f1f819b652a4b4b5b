@@ -1,0 +1,14 @@
+package com.alpdex.enums;
+
+public class GraduationEnum {
+
+	MATH,
+	PORTUGUESE,
+	SCIENCE,
+	HISTORY,
+	GEOGRAPHY,
+	ENGLISH, 
+	PHYSICS	,
+	CHEMISTRY,
+	PHYSICAL_EDUCATION
+}

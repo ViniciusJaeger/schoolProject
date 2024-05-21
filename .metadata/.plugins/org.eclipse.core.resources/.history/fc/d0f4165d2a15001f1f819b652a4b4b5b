@@ -1,0 +1,78 @@
+package com.alpdex.entity;
+
+import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import com.alpdex.enums.GraduationEnum;
+
+@Entity
+@Table(name="teacher")
+public class Teacher {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="teacher_id")
+	private Long id;
+	
+	@Column(name="teacher_name")
+	private String name;
+	
+	@Column(name="teacher_age")
+	private int age;
+	
+	@Enumerated(EnumType.STRING)
+	@Column(name="teacher_graduation")
+	private GraduationEnum graduation;
+	
+	@Column(name="teacher_registerDate")
+	private LocalDate registerDate = LocalDate.now();
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public GraduationEnum getGraduation() {
+		return graduation;
+	}
+
+	public void setGraduation(GraduationEnum graduation) {
+		this.graduation = graduation;
+	}
+
+	public LocalDate getRegisterDate() {
+		return registerDate;
+	}
+
+	public void setRegisterDate(LocalDate registerDate) {
+		this.registerDate = registerDate;
+	}
+}
+

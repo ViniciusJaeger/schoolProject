@@ -1,0 +1,5 @@
+package com.alpdex.utils;
+
+public class JPAUtil {
+
+}

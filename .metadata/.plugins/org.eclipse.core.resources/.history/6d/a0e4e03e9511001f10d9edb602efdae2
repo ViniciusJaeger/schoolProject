@@ -1,0 +1,22 @@
+package com.alpdex.demo;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import com.alpdex.entity.Student;
+
+public class StudentDemo {
+
+	public static void main(String[] args) {
+		
+		Student st = new Student();
+		
+		st.setName("Vinicius");
+		st.setAge(18);
+		st.setGrade(3);
+		
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("school");
+		EntityManager em = factory.createEntityManager();
+	}
+}

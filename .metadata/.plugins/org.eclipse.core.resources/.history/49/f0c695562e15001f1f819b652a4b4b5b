@@ -1,0 +1,5 @@
+package com.alpdex.dao;
+
+public class GraduationDao {
+
+}

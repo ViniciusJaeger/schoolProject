@@ -1,0 +1,15 @@
+package com.alpdex.demo;
+
+import com.alpdex.entity.Student;
+
+public class StudentDemo {
+
+	public static void main(String[] args) {
+		
+		Student st = new Student();
+		
+		st.setName("Vinicius");
+		st.setAge(18);
+		st.setGrade(3);
+	}
+}
