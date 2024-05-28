@@ -1,0 +1,25 @@
+package com.alpdex.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import com.alpdex.entity.Student;
+
+public class StudentDao {
+
+	private EntityManager em;
+
+	public StudentDao(EntityManager em) {
+		this.em = em;
+	}
+	
+	public void insert(Student student) {
+		this.em.persist(student);
+	}
+	
+	public List<Student> findAll(Student student){
+		this.em.createNamedQuery("Student.findAll").getResultList();
+	}
+	
+}

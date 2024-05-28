@@ -1,5 +1,6 @@
 package com.alpdex.dao;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -49,6 +50,11 @@ public class TeacherDao {
 	public String findByNameTeacher(String name){
 		String sql = "SELECT t.name FROM Teacher t WHERE t.name = :name";
 		return em.createQuery(sql, String.class).setParameter("name", name).getSingleResult();
+	}
+	
+	public List<Teacher> findByRegisterDay(LocalDate date){
+		String sql = "SELECT t FROM Teacher t WHERE t.registerDate = :date";
+		return em.createQuery(sql, Teacher.class).setParameter("date", date).getResultList();
 	}
 }
 

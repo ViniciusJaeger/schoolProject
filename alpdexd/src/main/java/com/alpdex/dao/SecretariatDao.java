@@ -16,8 +16,8 @@ public class SecretariatDao {
 		this.em.persist(secretariat);
 	}
 	
-//	public Integer studentControl() {
-//		String sql = "SELECT SUM(s.id) FROM Student s";
-//		return em.createQuery(sql, Integer.class).getSingleResult();
-//	}
+	public Long studentControl() {
+		String sql = "SELECT COUNT(*) FROM Student s";
+		return em.createQuery(sql, Long.class).getSingleResult();
+	}
 }

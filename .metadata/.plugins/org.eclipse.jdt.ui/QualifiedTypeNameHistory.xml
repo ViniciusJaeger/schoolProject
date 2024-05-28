@@ -12,8 +12,6 @@
     <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
     <fullyQualifiedTypeName name="com.alpdex.entity.Graduation"/>
     <fullyQualifiedTypeName name="com.alpdex.dao.GraduationDao"/>
-    <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
-    <fullyQualifiedTypeName name="com.alpdex.utils.JPAUtil"/>
     <fullyQualifiedTypeName name="com.alpdex.dao.TeacherDao"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="com.alpdex.entity.Teacher"/>
@@ -21,4 +19,8 @@
     <fullyQualifiedTypeName name="javax.persistence.Table"/>
     <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
     <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
+    <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+    <fullyQualifiedTypeName name="com.alpdex.utils.JPAUtil"/>
+    <fullyQualifiedTypeName name="com.alpdex.dao.SecretariatDao"/>
+    <fullyQualifiedTypeName name="com.alpdex.entity.Secretariat"/>
 </qualifiedTypeNameHistroy>

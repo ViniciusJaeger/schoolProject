@@ -7,10 +7,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="student")
+@NamedQuery(name="Student.findAll", query="SELECT s FROM Student s")
 public class Student {
 
 	@Id
@@ -53,5 +55,11 @@ public class Student {
 	}
 	public void setRegisterDate(LocalDate registerDate) {
 		this.registerDate = registerDate;
+	}
+	
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + ", age=" + age + ", grade=" + grade + ", registerDate="
+				+ registerDate + "]";
 	}
 }

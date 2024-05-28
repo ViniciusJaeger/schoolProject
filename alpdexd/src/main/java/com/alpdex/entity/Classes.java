@@ -16,8 +16,6 @@ public class Classes {
 	
 	private String name;
 	
-//	private Teacher teacher;
-
 	public String getName() {
 		return name;
 	}
@@ -25,12 +23,4 @@ public class Classes {
 	public void setName(String name) {
 		this.name = name;
 	}
-//
-//	public Teacher getTeacher() {
-//		return teacher;
-//	}
-//
-//	public void setTeacher(Teacher teacher) {
-//		this.teacher = teacher;
-//	}
 }

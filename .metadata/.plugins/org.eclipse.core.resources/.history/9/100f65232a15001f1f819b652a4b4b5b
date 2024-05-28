@@ -1,7 +1,0 @@
-package com.alpdex.enums;
-
-public class GraduationEnum {
-
-	private Long id;
-	private String name;
-}

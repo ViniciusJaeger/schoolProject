@@ -1,0 +1,30 @@
+package com.alpdex.demo;
+
+import javax.persistence.EntityManager;
+
+import com.alpdex.dao.SecretariatDao;
+import com.alpdex.entity.Secretariat;
+import com.alpdex.utils.JPAUtil;
+
+public class SecreatariatDemo {
+
+	public static void main(String[] args) {
+		EntityManager em = JPAUtil.getEntityManager();
+		SecretariatDao secretariatDao = new SecretariatDao(em);
+		
+		Secretariat s = new Secretariat();
+		s.setName("Escola Carlos Henrique");
+		
+		em.getTransaction().begin();
+		
+		secretariatDao.insert(s);
+		
+		em.getTransaction().commit();
+
+		
+		Integer sum = secretariatDao.studentControl();
+		System.out.println(sum);
+	}
+	
+	
+}

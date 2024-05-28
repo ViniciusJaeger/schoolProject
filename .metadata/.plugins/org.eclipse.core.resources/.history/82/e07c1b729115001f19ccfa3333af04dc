@@ -1,6 +1,0 @@
-package com.alpdex.entity;
-
-@Entity
-public class Classes {
-
-}

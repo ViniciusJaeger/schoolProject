@@ -7,11 +7,18 @@ import com.alpdex.entity.Secretariat;
 import com.alpdex.utils.JPAUtil;
 
 public class SecreatariatDemo {
+	
+	static EntityManager em = JPAUtil.getEntityManager();
+	
+	static SecretariatDao secretariatDao = new SecretariatDao(em);
 
 	public static void main(String[] args) {
-		EntityManager em = JPAUtil.getEntityManager();
-		SecretariatDao secretariatDao = new SecretariatDao(em);
 		
+		Long sum = secretariatDao.studentControl();
+		System.out.println(sum);
+	}
+	
+	public static void registerSecretariat() {
 		Secretariat s = new Secretariat();
 		s.setName("Escola Carlos Henrique");
 		
@@ -21,9 +28,6 @@ public class SecreatariatDemo {
 		
 		em.getTransaction().commit();
 
-		
-//		Integer sum = secretariatDao.studentControl();
-//		System.out.println(sum);
 	}
 	
 	

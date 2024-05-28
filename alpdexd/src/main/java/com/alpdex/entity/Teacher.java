@@ -29,8 +29,8 @@ public class Teacher {
 	@ManyToOne
 	private Graduation graduation;
 	
-//	@ManyToOne
-//	private Classes classes;
+	@ManyToOne
+	private Classes classes;
 	
 	@Column(name="teacher_registerDate")
 	private LocalDate registerDate = LocalDate.now();
@@ -57,6 +57,14 @@ public class Teacher {
 
 	public void setGraduation(Graduation graduation) {
 		this.graduation = graduation;
+	}
+	
+	public Classes getClasses() {
+		return classes;
+	}
+
+	public void setClasses(Classes classes) {
+		this.classes = classes;
 	}
 
 	public LocalDate getRegisterDate() {
